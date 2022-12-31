@@ -41,6 +41,8 @@ def car_plate_model(test_image_path,wpod_net):
         _ , LpImg, _, cor = detect_lp(wpod_net, vehicle, bound_dim, lp_threshold=0.5)
         return vehicle, LpImg, cor
 
+        
+
     # test_image_path = "dataset/plate5.jpeg"
     vehicle, LpImg, cor = get_plate(test_image_path)
 
