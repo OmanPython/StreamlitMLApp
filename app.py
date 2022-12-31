@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image 
 from model import car_plate_model,load_model
 import numpy as np
-import time
 
 
 st.write("Car Plate Detector")
