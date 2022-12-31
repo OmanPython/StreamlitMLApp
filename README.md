@@ -8,7 +8,7 @@ Steps
 3. Install Required Libraries 
 
 ```console
-pip install req.txt
+pip install -r requirements.txt
 ```
 4. run the following command in the terminal 
 ```console
