@@ -17,18 +17,19 @@ st.write(
 my_upload = st.sidebar.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
 
-
-
-
 def fix_image(image1,image2):
     image = Image.fromarray(np.uint8(image1*255))
     col1.write("Original Image :camera:")
     col1.image(image)
 
     col2.write("Plate(s) :camera:")
-    for img in image2:
-        img = Image.fromarray(np.uint8(img*255))
-        col2.image(img)
+    if image2:
+        for img in image2:
+            img = Image.fromarray(np.uint8(img*255))
+            col2.image(img)
+    else:
+        col2.warning("🚨 No LP found")
+    
 
 col1, col2 = st.columns(2)
 

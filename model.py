@@ -37,6 +37,7 @@ def car_plate_model(test_image_path,wpod_net):
         ratio = float(max(vehicle.shape[:2])) / min(vehicle.shape[:2])
         side = int(ratio * Dmin)
         bound_dim = min(side, Dmax)
+        print(bound_dim,ratio)
         _ , LpImg, _, cor = detect_lp(wpod_net, vehicle, bound_dim, lp_threshold=0.5)
         return vehicle, LpImg, cor
 
